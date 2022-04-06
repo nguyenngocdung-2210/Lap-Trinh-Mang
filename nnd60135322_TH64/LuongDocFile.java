@@ -67,6 +67,7 @@ public class LuongDocFile extends Thread{
                     {
                         String chuoiNhan = buffRead.readLine();
                         System.out.println("Client: "+chuoiNhan);
+                        String KQ = "";
                         switch (chuoiNhan) {
                                             case "1" -> GuiFile("D:\\file1.txt");
                                             case "2" -> GuiFile("D:\\file2.txt");
@@ -78,7 +79,8 @@ public class LuongDocFile extends Thread{
                                             case "8" -> GuiFile("D:\\file8.txt");
                                             case "9" -> GuiFile("D:\\file9.txt");
                                             }
-                        break;
+                        
+                        if (chuoiNhan.equals("0")) break;
             }
             socketClient.close();
         } catch (IOException ex) {
